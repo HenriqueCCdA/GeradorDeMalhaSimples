@@ -42,7 +42,7 @@ def gera_malha(prefixo: str, L_y: float, L_x: float, n_el_y: int, n_el_x: int):
     escreve_arquivo_txt(prefixo, nnodes, nel, x, el)
 
     # Escreve o arquivo de vtk
-    escreve_arquivo_vtk(prefixo, nnodes, nel, x, el, \
+    escreve_arquivo_vtk(prefixo, nnodes, nel, x, el,
                         linha_de_baixo, linha_de_cima, linha_da_esquerda,
                         linha_da_direita)
 
