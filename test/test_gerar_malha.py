@@ -81,7 +81,7 @@ class GeradorMalha(TestCase):
     def test_calculo_conetividade(self):
 
         n_el_y, n_el_x = 3, 4
-        nel = numero_de_elementos(3, 4)
+        nel = numero_de_elementos(n_el_y, n_el_x)
         el = gera_as_conectividade(nel, n_el_y, n_el_x)
 
         el_alvo = np.array(EL_ALVO)
@@ -89,12 +89,6 @@ class GeradorMalha(TestCase):
         assert_array_equal(el, el_alvo)
 
     def test_nos_de_contorno(self):
-        '''
-        a - Lista de nos da linha de baixo
-        b - Lista de nos da linha de cima
-        c - Lista de nos da linha da esquerda
-        d - Lista de nos da linha da direita
-        '''
 
         n_el_y, n_el_x = 3, 4
         n_nos_y, n_nos_x, _ = numero_nos(n_el_y, n_el_x)
